@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/screen.css" />
+    
+    <title>NFC Toolkit</title>
+
+    <!-- Inline scripts are forbidden in Firefox OS apps (CSP restrictions),
+         so we use a script file. -->
+    <script src="app.js" defer></script>
+    <script type="text/javascript" src="js/nfctest.js"></script>
+
+</head>
+
+<body width="100%" height="100%">
+  <div class="iPhone-screen-container">
+    <!-- main-website-inside-iphone -->
+    <div class="website-wrapper">
+      
+      <!-- ---------nav------------- -->
+      <div class="nav-container" id="nav-box">
+        <a class="goto-page-touch" href="#test"></a>
+        <div class="nav-content-wrapper">
+          <div class="nav-content-wrapper-inner">
+            <a href="#test=nfc_read_tag" id="icon1" class="nav-icon-wrapper">
+              <div class="nav-icon-img"></div>
+              <span class="nav-icon-text">Read</span>
+            </a>
+            
+            <a href="#test=nfc_write_tag" id="icon2" class="nav-icon-wrapper">
+              <div class="nav-icon-img"></div>
+              <span class="nav-icon-text">Write</span>
+            </a>
+            
+            <a href="#test=nfc_format_tag" id="icon3" class="nav-icon-wrapper">
+              <div class="nav-icon-img"></div>
+              <span class="nav-icon-text">Format</span>
+            </a>
+
+            <a href="#test=nfc_send_ndef" id="icon4" class="nav-icon-wrapper">
+              <div class="nav-icon-img"></div>
+              <span class="nav-icon-text">P2P</span>
+            </a>
+
+            <a href="../index.html" id="icon5" class="nav-icon-wrapper">
+              <div class="nav-icon-img"></div>
+              <span class="nav-icon-text">Home</span>
+            </a>
+
+            <a href="#test=about" id="icon6" class="nav-icon-wrapper">
+              <div class="nav-icon-img"></div>
+              <span class="nav-icon-text">About</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- ----------page--------- -->
+      <div class="page-container">
+        <div class="page-header-wrapper">
+          <a class="goto-nav-touch"href="#nav-box">
+            <div class="menu-icon-line"></div>
+            <div class="menu-icon-line mid"></div>
+            <div class="menu-icon-line"></div>
+          </a>
+          <span class="header-text" id="header-box">NFC Tag Toolkit</span>
+        </div>
+
+        <div class="page-content-wrapper">
+          <!-- -------page-content-start------------ -->
+          <div class="page-content">
+            <p class="content-text-p">
+              此NFC App提供下列四種功能<br/><br/>
+              1.讀取NFC標籤<br/><br/>
+              2.寫入NFC標籤<br/><br/>
+              3.格式化NFC標籤<br/><br/><br/>
+              
+              使用方式：<br/><br/>
+              將一NFC Tag至於手機背面，並開始使用各項功能
+            </p>
+          </div>
+          <div id="test-panel" class="panel test-panel">
+            <div class="toolbar">
+              <button id="test-panel-back">返回</button>
+              <p id="test-panel-title" class="toolbar-title"></p>
+              <p></p>
+            </div>
+            <iframe id="test-iframe" mozallowfullscreen="true"></iframe>
+          </div>
+          <!-- ------page-content-end----- -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
