@@ -3,37 +3,36 @@
   <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <meta charset="utf-8">
-    <title>NFC test</title>
+    <title>NFC Tag Toolkit</title>
     <script defer src="../../js/ndef_helper.js"></script>
     <script defer src="../../js/nfc_write_tag.js"></script>
     <link rel="stylesheet" type="text/css" href="../style/API.css">
   </head>
   <body>
-    <fieldset>
-      <legend>URL to be written</legend>
-      <section>
-        <select id="urlOptions">
-          <option value="https://www.mozilla.org">Mozilla</option>
-          <option value="https://www.mozilla.org/en-US/firefox/os/">FirefoxOS</option>
-          <option value="https://www.mozilla.org/en-US/firefox/">Firefox</option>
-          <option value="https://www.yahoo.com/">Yahoo</option>
-        </select>
-      </section>
-    </fieldset>
-
     <div id="content">
       <div>
-        <h2>Test Description</h2>
+        <h2>如何使用：</h2>
         <h5>
-          Tap an NFC tag, then this app will try to write URL to that tag.
+          將NFC Tag至於手機背板，此Tag將被寫入該URL。
         </h5>
       </div>
 
+      <h4 id="success-message" class="success">開啟NFC：是</h4>
       <h4 id="global-message" class="error"></h4>
       <div data-type="tag-container">
         <div><span data-type="write-result" style="font-weight:bold"></span> </div>
       </div>
-
     </div>
+    <fieldset>
+      <legend>URL to be written</legend>
+      <section>
+        <select id="urlOptions">
+          <option value="https://www.google.com">Google</option>
+          <option value="https://www.facebook.com">Facebook</option>
+          <option value="https://www.mozilla.org/zh-TW/firefox/new/">Firefox</option>
+          <option value="https://www.yahoo.com/">Yahoo</option>
+        </select>
+      </section>
+    </fieldset>
   </body>
 </html>

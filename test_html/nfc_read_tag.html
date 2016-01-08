@@ -3,38 +3,38 @@
   <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <meta charset="utf-8">
-    <title>NFC test</title>
+    <title>NFC Tag Toolkit</title>
     <script defer src="../../js/ndef_helper.js"></script>
     <script defer src="../../js/nfc_read_tag.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/API.css">
+    <link rel="stylesheet" type="text/css" href="../style/API.css">
   </head>
   <body>
     <div id="content">
       <div>
-        <h2>Test Description</h2>
+        <h2>如何使用：</h2>
         <h5>
-          Tap an NFC tag, then this app will show the information of that tag, and
-          display the NDEF Records contained within this tag. If the tag is not
-          compliant with NFC Forum Tag, or is not formated as NDEF, some information
-          will be null.
+          將NFC Tag至於裝置背板，本APP將會呈現Tag的所有資訊和NDEF紀錄。
+          若此標籤並非NDEF格式，有些資訊將顯示為null。
         </h5>
       </div>
-      <div>
-        <h2>NFC Tag Info</h2>
-      </div>
+      
       <h4 id="success-message" class="success"></h4>
       <h4 id="error-message" class="error"></h4>
+      
+      <div>
+        <h2>NFC Tag 內容：</h2>
+      </div>
 
      <div id="tag-container">
         <ul>
-          <li><b>Supported Technology List: </b><span data-type="tech-list"/> </li>
-          <li><b>Tag ID: </b><span data-type="tag-id"/> </li>
-          <li><b>Tag Type: </b><span data-type="tag-type"/> </li>
-          <li><b>Max NDEF size: </b><span data-type="max-ndef-size"/> </li>
-          <li><b>Read-Only: </b><span data-type="read-only"/> </li>
-          <li><b>Formatable: </b><span data-type="formatable"/> </li>
-          <li><b>Can be made Read-Only: </b><span data-type="can-be-made-read-only"/> </li>
-          <li><b>is Lost: </b><span data-type="is-lost"/> </li>
+          <li><b>標籤種類: </b><span data-type="tech-list"/> </li>
+          <li><b>標籤 ID: </b><span data-type="tag-id"/> </li>
+          <li><b>標籤 Type: </b><span data-type="tag-type"/> </li>
+          <li><b>最大 NDEF size: </b><span data-type="max-ndef-size"/> </li>
+          <li><b>唯讀: </b><span data-type="read-only"/> </li>
+          <li><b>可格式化: </b><span data-type="formatable"/> </li>
+          <li><b>可製作成唯讀: </b><span data-type="can-be-made-read-only"/> </li>
+          <!--<li><b>is Lost: </b><span data-type="is-lost"/> </li>-->
         </ul>
       </div>
 
